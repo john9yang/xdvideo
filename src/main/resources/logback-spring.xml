@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
 
-    <springProperty scope="context" name="springAppName" source="spring.application.name"/>
-
-    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
-
     <appender name="consoleApp" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
             <pattern>
-                ${CONSOLE_LOG_PATTERN}
+                %date{yyyy-MM-dd HH:mm:ss.SSS} %-5level[%thread]%logger{56}.%method:%L -%msg%n
             </pattern>
         </layout>
     </appender>
